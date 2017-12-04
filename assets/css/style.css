@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body {
+  background-color: #111;
+  font-family: 'sans-serif';
+  font-size: 14pt; }
+
+#wrapper {
+  text-align: center; }
+
+#scheme-container {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  display: flex; }
+  #scheme-container .faders {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    #scheme-container .faders .fader span[class$=up-arrow]:before {
+      content: "▲"; }
+    #scheme-container .faders .fader span[class$=-value] {
+      display: inline-block;
+      font-size: 90%; }
+    #scheme-container .faders .fader span[class$=down-arrow]:before {
+      content: "▼"; }
+    #scheme-container .faders .red {
+      background-color: #f00; }
+    #scheme-container .faders .green {
+      background-color: #0f0; }
+    #scheme-container .faders .blue {
+      background-color: #00f; }
+  #scheme-container .color-block {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: relative; }
+    #scheme-container .color-block .color-menu {
+      display: none;
+      font-size: 200%;
+      cursor: pointer;
+      opacity: 0.20;
+      transition: opacity 250ms ease; }
+    #scheme-container .color-block .options {
+      float: right; }
+    #scheme-container .color-block .color-menu:hover {
+      opacity: 1;
+      transition: opacity 250ms ease; }
+
+#newColorButton {
+  display: inline;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  color: #fff;
+  background-color: #345;
+  transition: background-color 500ms ease; }
+
+#newColorButton:hover {
+  background-color: #567;
+  cursor: pointer;
+  transition: background-color 500ms ease; }
+
+/*# sourceMappingURL=style.css.map */

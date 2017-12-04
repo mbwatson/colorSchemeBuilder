@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Color Scheme Generato</title>
+  <script src="assets/js/lib/p5.min.js" type="text/javascript"></script> 
+  <script src="assets/js/lib/p5.dom.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+<body>
+  <div id="wrapper">
+    <div id="scheme-container"></div>
+    <div id="newColorButton" onclick="newColorBlock()">&#65291; COLOR</div>
+    <div class="color-block-template">
+      <div class="color-menu options" onclick="colorMenu()">&#9881;</div>
+      <div class="faders">
+        <div class="fader red">
+          <span class="red-up-arrow"></span>
+          <span class="red-value">0</span>
+          <span class="red-down-arrow"></span>
+        </div>
+        <div class="fader green">
+          <span class="green-up-arrow"></span>
+          <span class="green-value">0</span>
+          <span class="green-down-arrow"></span>
+        </div>
+        <div class="fader blue">
+          <span class="blue-up-arrow"></span>
+          <span class="blue-value">0</span>
+          <span class="blue-down-arrow"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/lib/jquery-3.2.1.js" type="text/javascript"></script> 
+  <script src="assets/js/colors.js"></script>
+</body>
+</html>
