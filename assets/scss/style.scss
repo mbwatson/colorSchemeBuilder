@@ -9,11 +9,11 @@ body {
 }
 #scheme-container {
   width: 100%;
-  height: 50%;
+  height: 600px;
   text-align: center;
-  position: absolute;
-  top: 10%;
-  left: 0;
+  // position: absolute;
+  // top: 10%;
+  // left: 0;
   display: flex;
   .faders {
     position: absolute;
@@ -56,13 +56,14 @@ body {
   }
 }
 
+.faders, .color-menu {
+  display: none;
+}
+
 #newColorButton {
-  display: inline;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  display: inline-block;
   text-align: center;
-  margin: 1em 0;
+  margin: 2em 0 1em 0;
   padding: 0.5em 1em;
   border-radius: 30px;
   color: #fff;
@@ -73,4 +74,9 @@ body {
   background-color: #567;
   cursor: pointer;
   transition: background-color 500ms ease;
+}
+
+#instructions {
+  color: #fff;
+  padding: 0 10em;
 }
