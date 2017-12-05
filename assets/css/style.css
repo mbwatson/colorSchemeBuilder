@@ -57,6 +57,7 @@ body {
   display: none; }
 
 #newColorButton {
+  font-size: 125%;
   display: inline-block;
   text-align: center;
   margin: 2em 0 1em 0;
@@ -73,6 +74,11 @@ body {
 
 #instructions {
   color: #fff;
-  padding: 0 10em; }
+  padding: 0 10em;
+  text-align: left; }
+  #instructions .add-color-reference {
+    border-radius: 12px;
+    background-color: #345;
+    padding: 0.2em 0.5em; }
 
 /*# sourceMappingURL=style.css.map */
