@@ -12,48 +12,60 @@ body {
   height: 600px;
   text-align: center;
   display: flex; }
-  #scheme-container .faders {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; }
-    #scheme-container .faders .fader span[class$=up-arrow]:before {
-      content: "▲"; }
-    #scheme-container .faders .fader span[class$=-value] {
-      display: inline-block;
-      font-size: 90%; }
-    #scheme-container .faders .fader span[class$=down-arrow]:before {
-      content: "▼"; }
-    #scheme-container .faders .red {
-      background-color: #f00; }
-    #scheme-container .faders .green {
-      background-color: #0f0; }
-    #scheme-container .faders .blue {
-      background-color: #00f; }
   #scheme-container .color-block {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-color: #000;
     position: relative;
-    text-align: center; }
+    color: #fff;
+    font-size: 150%; }
     #scheme-container .color-block .color-hex {
-      color: #fff;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.25em 0.5em;
+      background-color: #000;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 0  15px 0 #000;
       font-weight: bold;
-      font-size: 150%;
-      margin-top: 0.25em;
       cursor: pointer; }
     #scheme-container .color-block .color-menu {
       display: none;
       position: absolute;
+      padding: 0.25em 0.5em;
       right: 0;
       top: 0;
-      font-size: 200%;
-      color: #fff;
+      background-color: #000;
+      border-bottom-left-radius: 15px;
+      box-shadow: 0 0  15px 0 #000;
       cursor: pointer; }
+    #scheme-container .color-block .faders {
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; }
+      #scheme-container .color-block .faders .fader {
+        cursor: ns-resize;
+        padding: 10px 0;
+        font-size: 60%; }
+        #scheme-container .color-block .faders .fader span[class$=up-arrow]:before {
+          content: "▼"; }
+        #scheme-container .color-block .faders .fader span[class$=-value] {
+          display: inline-block; }
+        #scheme-container .color-block .faders .fader span[class$=down-arrow]:before {
+          content: "▲"; }
+      #scheme-container .color-block .faders .red {
+        background-color: #f00; }
+      #scheme-container .color-block .faders .green {
+        background-color: #0f0; }
+      #scheme-container .color-block .faders .blue {
+        background-color: #00f; }
 
-.faders, .color-menu {
+.color-block-template {
   display: none; }
 
 #newColorButton {
@@ -74,7 +86,7 @@ body {
 
 #instructions {
   color: #fff;
-  padding: 0 10em;
+  padding: 0 7em;
   text-align: left; }
   #instructions .add-color-reference {
     border-radius: 12px;

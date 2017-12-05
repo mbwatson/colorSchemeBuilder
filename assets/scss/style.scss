@@ -11,55 +11,63 @@ body {
   width: 100%;
   height: 600px;
   text-align: center;
-  // position: absolute;
-  // top: 10%;
-  // left: 0;
   display: flex;
-  .faders {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    .fader {
-      span[class$=up-arrow]:before { content: "▲"; }
-      span[class$=-value] {
-        display: inline-block;
-        font-size: 90%;
-      }
-      span[class$=down-arrow]:before { content: "▼"; }
-    }
-    .red { background-color: #f00; }
-    .green { background-color: #0f0; }
-    .blue { background-color: #00f; }
-  }
   .color-block {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-color: #000;
     position: relative;
-    text-align: center;
+    color: #fff;
+    font-size: 150%;
     .color-hex {
-      color: #fff;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.25em 0.5em;
+      background-color: #000;
+      border-bottom-right-radius: 15px;
+      box-shadow: 0 0  15px 0 #000;
       font-weight: bold;
-      font-size: 150%;
-      margin-top: 0.25em;
       cursor: pointer;
     }
     .color-menu {
       display: none;
       position: absolute;
+      padding: 0.25em 0.5em;
       right: 0;
       top: 0;
-      font-size: 200%;
-      color: #fff;
+      background-color: #000;
+      border-bottom-left-radius: 15px;
+      box-shadow: 0 0  15px 0 #000;
       cursor: pointer;
+    }
+    .faders {
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      .fader {
+        cursor: ns-resize;
+        padding: 10px 0;
+        font-size: 60%;
+        span[class$=up-arrow]:before { content: "▼"; }
+        span[class$=-value] {
+          display: inline-block;
+        }
+        span[class$=down-arrow]:before { content: "▲"; }
+      }
+      .red { background-color: #f00; }
+      .green { background-color: #0f0; }
+      .blue { background-color: #00f; }
     }
   }
 }
 
-.faders, .color-menu {
+.color-block-template {
   display: none;
 }
 
@@ -82,14 +90,11 @@ body {
 
 #instructions {
   color: #fff;
-  padding: 0 10em;
+  padding: 0 7em;
   text-align: left;
   .add-color-reference {
     border-radius: 12px;
     background-color: #345;
     padding: 0.2em 0.5em;
-  }
-  .menu-reference {
-    
   }
 }
