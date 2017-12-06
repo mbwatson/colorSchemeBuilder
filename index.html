@@ -13,6 +13,7 @@
     <div id="scheme-container"></div>
     <div id="newColorButton" onclick="newColorBlock()">&#65291; COLOR</div>
     <div id="instructions">
+      <h3>Instructions</h3>
       <p>Change the RGB levels of a color block by scrolling over the pop-up color faders.</p>
       <p>Add a new color block with the <span class="add-color-reference">&#65291; Color</span> button.</p>
       <p>Hovering on a color block yields a few opportunities:
@@ -22,15 +23,14 @@
           <li>Copy the hexadecimal color code to your clipboard by clicking it.</li>
         </ul>
       </p>
-      <p>TO DO
-        <ul>
-          <li>Tooltips</li>
-          <li>Draggable blocks</li>
-          <li>Add color options (random, average, complement of average, etc.)</li>
-        </ul>
-      </p>
+      <h3>To do</h3>
+      <ul>
+        <li>Tooltips</li>
+        <li>Draggable blocks - perhaps freely-movable blocks around page or around a defined workspace</li>
+        <li>Add color options (random, average, complement of average, etc.)</li>
+      </ul>
     </div>
-    <div class="color-block-template">
+    <div class="color-block-template" draggable="true">
       <div class="color-hex"></div>
       <div class="color-menu">
         <span class="color-duplicate" onclick="duplicateColor(this.closest('.color-block'))"><i class="fa fa-clone" aria-hidden="true"></i></span>
