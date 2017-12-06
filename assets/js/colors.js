@@ -2,6 +2,35 @@ $(function() {
 	newColorBlock();
 })
 
+function newColorBlock() {
+	let r = randomInteger(0, 255);
+	let g = randomInteger(0, 255);
+	let b = randomInteger(0, 255);
+	$('.color-block-template').clone()
+		.attr('class', 'color-block')
+		.appendTo('#scheme-container')
+		.css('background-color', `rgb(${r},${g},${b})`)
+		.find('.color-hex').text(rgbToHexString(r, g, b))
+		.on('click', function() {
+			copyToClipboard($(this).text());
+			alert(`Copied ${$(this).text()} to clipboard.`)
+		});
+	$('.color-block').last().find('.red-value').text(r);
+	$('.color-block').last().find('.green-value').text(g);
+	$('.color-block').last().find('.blue-value').text(b);
+	bindMousewheel($('.color-block'));
+}
+
+function duplicateColor(el) {
+	console.log(el.closest('.color-block'));
+	$(el).clone().appendTo('#scheme-container');
+}
+
+function trashColor(el) {
+	console.log(el.closest('.color-block'));
+	el.remove();
+}
+
 function bindMousewheel() {
 	$('.fader').bind('mousewheel', function(e) {
   	let r, g, b;
@@ -30,43 +59,12 @@ function bindMousewheel() {
 	});
 }
 
-function newColorBlock() {
-	let r = randomInteger(0, 255);
-	let g = randomInteger(0, 255);
-	let b = randomInteger(0, 255);
-	$('.color-block-template').clone()
-		.attr('class', 'color-block')
-		.appendTo('#scheme-container')
-		.css('background-color', `rgb(${r},${g},${b})`)
-		.hover(function() { // mouseenter
-			$(this).children('.faders').slideDown(250);
-			$(this).children('.color-menu').fadeIn(250);
-			$(this).children('.color-hex').fadeIn(250);
-		}, function() { //mouseleave
-			$(this).children('.color-hex').fadeOut(250);
-			$(this).children('.faders').slideUp(250);
-			$(this).children('.color-menu').fadeOut(250);
-	}).find('.color-hex').text(rgbToHexString(r, g, b))
-		.on('click', function() {
-			copyToClipboard($(this).text());
-			alert(`Copied ${$(this).text()} to clipboard.`)
-		});
-	$('.color-block').last().find('.red-value').text(r);
-	$('.color-block').last().find('.green-value').text(g);
-	$('.color-block').last().find('.blue-value').text(b);
-	bindMousewheel($('.color-block'));
-}
-
 function minMax(value, low, high) {
 	return (Math.min(Math.max(value, low), high));
 }
 
 function randomInteger(min, max) {
 	return Math.floor((max - min + 1)*Math.random() + min);
-}
-
-function colorMenu() {
-	alert('Color options! \n\n      (Soon)');
 }
 
 function copyToClipboard(text) {

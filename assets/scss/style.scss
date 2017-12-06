@@ -12,41 +12,62 @@ body {
   height: 600px;
   text-align: center;
   display: flex;
+  .color-block:hover {
+    .color-hex {
+      top: 0;
+      transition: top 500ms ease;
+    }
+    .color-menu {
+      top: 0;
+      transition: top 500ms ease;
+    }
+    .faders {
+      bottom: 0;
+      transition: bottom 500ms ease;
+    }
+  }
   .color-block {
     overflow: hidden;
     width: 100%;
+    min-width: 200px;
     height: 100%;
     background-color: #000;
     position: relative;
     color: #fff;
-    font-size: 150%;
+    font-size: 110%;
     .color-hex {
-      display: none;
       position: absolute;
       left: 0;
-      top: 0;
+      height: 30px;
+      top: -50px;
       padding: 0.25em 0.5em;
       background-color: #000;
       border-bottom-right-radius: 15px;
       box-shadow: 0 0  15px 0 #000;
       font-weight: bold;
+      transition: top 500ms ease;
       cursor: pointer;
     }
     .color-menu {
-      display: none;
       position: absolute;
-      padding: 0.25em 0.5em;
       right: 0;
-      top: 0;
+      top: -50px;
+      transition: top 500ms ease;
+      height: 30px;
+      padding: 0.25em 0.5em;
       background-color: #000;
       border-bottom-left-radius: 15px;
-      box-shadow: 0 0  15px 0 #000;
-      cursor: pointer;
+      box-shadow: 0 0 15px 0 #000;
+      i {
+        cursor: pointer;
+        padding: 0 0.25em;
+      }
     }
     .faders {
       color: #fff;
       position: absolute;
-      bottom: 0;
+      bottom: -35px;
+      transition: bottom 500ms ease;
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -92,6 +113,7 @@ body {
   color: #fff;
   padding: 0 7em;
   text-align: left;
+  font-size: 110%;
   .add-color-reference {
     border-radius: 12px;
     background-color: #345;
