@@ -7,26 +7,19 @@ body {
 #wrapper {
   text-align: center; }
 
+#page-title {
+  color: #eef; }
+
 #scheme-container {
   width: 100%;
   height: 400px;
   text-align: center;
   display: flex; }
-  #scheme-container .color-block:hover .color-hex {
-    top: 0;
-    transition: top 500ms ease; }
-  #scheme-container .color-block:hover .color-menu {
-    top: 0;
-    transition: top 500ms ease; }
-  #scheme-container .color-block:hover .faders {
-    bottom: 0;
-    transition: bottom 500ms ease; }
   #scheme-container .color-block {
     overflow: hidden;
     width: 100%;
     min-width: 250px;
     height: 100%;
-    background-color: #000;
     position: relative;
     color: #fff;
     font-size: 110%; }
@@ -79,6 +72,15 @@ body {
         background-color: #0f0; }
       #scheme-container .color-block .faders .blue {
         background-color: #00f; }
+  #scheme-container .color-block:hover .color-hex {
+    top: 0;
+    transition: top 500ms ease; }
+  #scheme-container .color-block:hover .color-menu {
+    top: 0;
+    transition: top 500ms ease; }
+  #scheme-container .color-block:hover .faders {
+    bottom: 0;
+    transition: bottom 500ms ease; }
 
 .color-block-template {
   display: none; }
