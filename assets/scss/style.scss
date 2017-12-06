@@ -1,7 +1,7 @@
 body {
 	background-color: #111;
-  font-family: 'sans-serif';
-  font-size: 14pt;
+  font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+  font-size: 12pt;
 }
 // * { border: 1px solid #f00; }
 #wrapper {
@@ -46,6 +46,13 @@ body {
       background-color: #000;
       border-bottom-left-radius: 15px;
       box-shadow: 0 0 15px 0 #000;
+      color: #fff;
+      .color-delete { transition: color 500ms ease; }
+      .color-duplicate { transition: color 500ms ease; }
+      .color-hex { transition: color 500ms ease; }
+      .color-delete:hover { color: #f00; }
+      .color-duplicate:hover { color: #0ff; }
+      .color-hex:hover { color: #0f0; }
       .fa {
         cursor: pointer;
         padding: 0 0.25em;
@@ -75,18 +82,9 @@ body {
     }
   }
   .color-block:hover {
-    .color-hex {
-      top: 0;
-      transition: top 500ms ease;
-    }
-    .color-menu {
-      top: 0;
-      transition: top 500ms ease;
-    }
-    .faders {
-      bottom: 0;
-      transition: bottom 500ms ease;
-    }
+    .color-hex { top: 0; }
+    .color-menu { top: 0; }
+    .faders { bottom: 0; }
   }
 }
 
@@ -98,7 +96,7 @@ body {
   font-size: 125%;
   display: inline-block;
   text-align: center;
-  margin: 2em 0 1em 0;
+  margin: 1em 0 1em 0;
   padding: 0.5em 1em;
   border-radius: 30px;
   color: #fff;
@@ -108,7 +106,6 @@ body {
 #newColorButton:hover {
   background-color: #567;
   cursor: pointer;
-  transition: background-color 500ms ease;
 }
 
 #instructions {

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 body {
   background-color: #111;
-  font-family: 'sans-serif';
-  font-size: 14pt; }
+  font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+  font-size: 12pt; }
 
 #wrapper {
   text-align: center; }
@@ -44,7 +44,20 @@ body {
       padding: 0.25em 0.5em;
       background-color: #000;
       border-bottom-left-radius: 15px;
-      box-shadow: 0 0 15px 0 #000; }
+      box-shadow: 0 0 15px 0 #000;
+      color: #fff; }
+      #scheme-container .color-block .color-menu .color-delete {
+        transition: color 500ms ease; }
+      #scheme-container .color-block .color-menu .color-duplicate {
+        transition: color 500ms ease; }
+      #scheme-container .color-block .color-menu .color-hex {
+        transition: color 500ms ease; }
+      #scheme-container .color-block .color-menu .color-delete:hover {
+        color: #f00; }
+      #scheme-container .color-block .color-menu .color-duplicate:hover {
+        color: #0ff; }
+      #scheme-container .color-block .color-menu .color-hex:hover {
+        color: #0f0; }
       #scheme-container .color-block .color-menu .fa {
         cursor: pointer;
         padding: 0 0.25em; }
@@ -73,14 +86,11 @@ body {
       #scheme-container .color-block .faders .blue {
         background-color: #00f; }
   #scheme-container .color-block:hover .color-hex {
-    top: 0;
-    transition: top 500ms ease; }
+    top: 0; }
   #scheme-container .color-block:hover .color-menu {
-    top: 0;
-    transition: top 500ms ease; }
+    top: 0; }
   #scheme-container .color-block:hover .faders {
-    bottom: 0;
-    transition: bottom 500ms ease; }
+    bottom: 0; }
 
 .color-block-template {
   display: none; }
@@ -89,7 +99,7 @@ body {
   font-size: 125%;
   display: inline-block;
   text-align: center;
-  margin: 2em 0 1em 0;
+  margin: 1em 0 1em 0;
   padding: 0.5em 1em;
   border-radius: 30px;
   color: #fff;
@@ -98,8 +108,7 @@ body {
 
 #newColorButton:hover {
   background-color: #567;
-  cursor: pointer;
-  transition: background-color 500ms ease; }
+  cursor: pointer; }
 
 #instructions {
   color: #cde;
