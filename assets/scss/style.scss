@@ -9,7 +9,7 @@ body {
 }
 #scheme-container {
   width: 100%;
-  height: 600px;
+  height: 400px;
   text-align: center;
   display: flex;
   .color-block:hover {
@@ -29,7 +29,7 @@ body {
   .color-block {
     overflow: hidden;
     width: 100%;
-    min-width: 200px;
+    min-width: 250px;
     height: 100%;
     background-color: #000;
     position: relative;
@@ -58,7 +58,7 @@ body {
       background-color: #000;
       border-bottom-left-radius: 15px;
       box-shadow: 0 0 15px 0 #000;
-      i {
+      .fa {
         cursor: pointer;
         padding: 0 0.25em;
       }
@@ -110,10 +110,10 @@ body {
 }
 
 #instructions {
-  color: #fff;
+  color: #cde;
   padding: 0 7em;
   text-align: left;
-  font-size: 110%;
+  font-size: 90%;
   .add-color-reference {
     border-radius: 12px;
     background-color: #345;
