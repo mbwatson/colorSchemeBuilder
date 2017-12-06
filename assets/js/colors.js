@@ -15,19 +15,18 @@ function newColorBlock() {
 			copyToClipboard($(this).text());
 			alert(`Copied ${$(this).text()} to clipboard.`)
 		});
-	$('.color-block').last().find('.red-value').text(r);
-	$('.color-block').last().find('.green-value').text(g);
-	$('.color-block').last().find('.blue-value').text(b);
-	bindMousewheel($('.color-block'));
+	let newColorBlock = $('.color-block').last();
+	newColorBlock.find('.red-value').text(r);
+	newColorBlock.find('.green-value').text(g);
+	newColorBlock.find('.blue-value').text(b);
+	bindMousewheel(newColorBlock);
 }
 
 function duplicateColor(el) {
-	console.log(el.closest('.color-block'));
-	$(el).clone().appendTo('#scheme-container');
+	bindMousewheel($(el).clone().appendTo('#scheme-container'));
 }
 
 function trashColor(el) {
-	console.log(el.closest('.color-block'));
 	el.remove();
 }
 
