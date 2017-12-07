@@ -31,7 +31,7 @@ function trashColor(el) {
 }
 
 function bindMousewheel() {
-	$('.fader').bind('mousewheel', function(e) {
+	$('.fader').bind('wheel', function(e) {
   	let r, g, b;
 		let colorBlock = $(this).parents('.color-block');
 		let currentColor = colorBlock.css("background-color");
