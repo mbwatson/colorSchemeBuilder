@@ -23,7 +23,7 @@ function newColorBlock() {
 }
 
 function duplicateColor(el) {
-	bindMousewheel($(el).clone().appendTo('#scheme-container'));
+	bindMousewheel($(el).clone().appendTo('#scheme-container #sortable'));
 }
 
 function trashColor(el) {
