@@ -33,6 +33,7 @@ function trashColor(el) {
 
 function bindMousewheel() {
 	$('.fader').bind('wheel', function(e) {
+		e.preventDefault(); // prevent scrolling the window when hovering over color fader
   	let r, g, b;
 		let colorBlock = $(this).parents('.color-block');
 		let currentColor = colorBlock.css("background-color");
