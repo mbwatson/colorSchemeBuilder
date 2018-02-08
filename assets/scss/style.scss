@@ -59,7 +59,6 @@ body {
       }
     }
     .faders {
-      color: #fff;
       position: absolute;
       bottom: -35px;
       transition: bottom 500ms ease;
@@ -67,18 +66,20 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       .fader {
+        font-family: 'Dhurjati', sans-serif;
         cursor: ns-resize;
         padding: 10px 0;
         font-size: 60%;
+        font-weight: bold;
         span[class$=up-arrow]:before { content: "▼"; }
         span[class$=-value] {
           display: inline-block;
         }
         span[class$=down-arrow]:before { content: "▲"; }
       }
-      .red { background-color: #f00; }
-      .green { background-color: #0f0; }
-      .blue { background-color: #00f; }
+      .red { background-color: #f00; color: #0ff; }
+      .green { background-color: #0f0; color: #f0f; }
+      .blue { background-color: #00f; color: #0ff; }
     }
   }
   .color-block:hover {

@@ -62,7 +62,6 @@ body {
         cursor: pointer;
         padding: 0 0.25em; }
     #scheme-container .color-block .faders {
-      color: #fff;
       position: absolute;
       bottom: -35px;
       transition: bottom 500ms ease;
@@ -70,9 +69,11 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; }
       #scheme-container .color-block .faders .fader {
+        font-family: 'Dhurjati', sans-serif;
         cursor: ns-resize;
         padding: 10px 0;
-        font-size: 60%; }
+        font-size: 60%;
+        font-weight: bold; }
         #scheme-container .color-block .faders .fader span[class$=up-arrow]:before {
           content: "▼"; }
         #scheme-container .color-block .faders .fader span[class$=-value] {
@@ -80,11 +81,14 @@ body {
         #scheme-container .color-block .faders .fader span[class$=down-arrow]:before {
           content: "▲"; }
       #scheme-container .color-block .faders .red {
-        background-color: #f00; }
+        background-color: #f00;
+        color: #0ff; }
       #scheme-container .color-block .faders .green {
-        background-color: #0f0; }
+        background-color: #0f0;
+        color: #f0f; }
       #scheme-container .color-block .faders .blue {
-        background-color: #00f; }
+        background-color: #00f;
+        color: #0ff; }
   #scheme-container .color-block:hover .color-hex {
     top: 0; }
   #scheme-container .color-block:hover .color-menu {
